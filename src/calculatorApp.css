@@ -207,7 +207,23 @@
     color: hsl(198, 20%, 13%)
 }
 
+
+/* Some button pressing pizzazz */
+.CalculatorApp .keypad button:active div{
+    transform: translateY(1px);
+}
+
 /* Getting rid of the ugly focus box */
 *:focus {
     outline: 0 !important;
+}
+button {
+    outline: none;
+  }
+  input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
