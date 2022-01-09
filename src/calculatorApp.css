@@ -207,3 +207,7 @@
     color: hsl(198, 20%, 13%)
 }
 
+/* Getting rid of the ugly focus box */
+*:focus {
+    outline: 0 !important;
+}
