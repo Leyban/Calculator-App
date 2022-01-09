@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.CalculatorApp{
+    font-family: 'Spartan', sans-serif;
+    padding: 20px;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.calcContainer{
+    width: 450px;
+}
+
+/* Header Styles */
+.CalculatorApp .top-part h3{
+    font-size: 25px;
+    font-weight: 700;
+}
+.CalculatorApp .top-part{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.CalculatorApp p{  
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.CalculatorApp .theme-box{
+    display: flex;
+    flex-direction: column;
+}
+.CalculatorApp .theme-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+}
+.CalculatorApp .theme-number{
+    margin-left: auto;
+    margin-right: 2px;
+    letter-spacing: 5px;
+}
+.CalculatorApp .switch input{display: none;}
+.CalculatorApp .slider{
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.CalculatorApp .slider::after{
+    background-color: white;    
+    content: "";
+    position: absolute;
+    margin: 3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 9px;
+    transition: 0.2s;
+}
+
+/* Screen Styles */
+.CalculatorApp .screen{
+    background-color: navy;
+    width: auto;
+    height: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.CalculatorApp .screen h3{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Keypad Styles */
+.CalculatorApp .keypad{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.CalculatorApp .keypad .two-grids{
+    grid-column: auto / span 2;
+}
+.CalculatorApp .keypad button{
+    border:none;
+    border-radius: 10px;
+    padding:0;
+    cursor: pointer;
+}
+.CalculatorApp .keypad button div{
+    transform: translateY(-5px);
+    border-radius: 10px;
+}
+.CalculatorApp .keypad .operational{
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 700;
+}
+.CalculatorApp .operational div{
+    padding: 13px 0 7px 0;
+}
+.CalculatorApp .keypad .erasional{
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+}
+.CalculatorApp .erasional div{
+    padding: 19px 0 14px 0;
+}
+.CalculatorApp .equals{
+    font-size: 15px;
+    font-weight: 700;
+}
+.CalculatorApp .equals div{
+    padding: 19px 0 14px 0;
+}
+
+/* Styling by the Themes */
+/* Blue theme */
+.blueCalc {
+    color: white;
+    background-color: hsl(222, 26%, 31%);
+}
+.blueCalc .screen{background-color: hsl(224, 36%, 15%);}
+.blueCalc .keypad{background-color: hsl(223, 31%, 20%);}
+.blueCalc .slider{background-color: hsl(223, 31%, 20%);}
+.blueCalc .slider::after{background-color: hsl(6, 63%, 50%);}
+.blueCalc .keypad .operational{background-color: hsl(28, 16%, 65%);}
+.blueCalc .keypad .operational div{
+    background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
+}
+.blueCalc .keypad .erasional{background-color: hsl(224, 28%, 35%);}
+.blueCalc .keypad .erasional div{
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+}
+.blueCalc .keypad .equals{background-color: hsl(6, 70%, 34%);}
+.blueCalc .keypad .equals div{
+    background-color: hsl(6, 63%, 50%);
+    color: white;
+}
+
+/* White theme */
+.whiteCalc {
+    color: hsl(60, 10%, 19%);
+    background-color: hsl(0, 0%, 90%);
+}
+.whiteCalc .screen{background-color: hsl(0, 0%, 93%);}
+.whiteCalc .keypad{background-color: hsl(0, 5%, 81%);}
+.whiteCalc .slider{background-color: hsl(0, 5%, 81%);}
+.whiteCalc .slider::after{
+    background-color: hsl(25, 98%, 40%);
+    transform: translateX(19px);
+}
+.whiteCalc .keypad .operational{background-color: hsl(35, 11%, 61%);}
+.whiteCalc .keypad .operational div{
+    background-color: hsl(45, 7%, 89%);
+    color: hsl(60, 10%, 19%);
+}
+.whiteCalc .keypad .erasional{background-color: hsl(185, 58%, 25%);}
+.whiteCalc .keypad .erasional div{
+    background-color: hsl(185, 42%, 37%);
+    color: white;
+}
+.whiteCalc .keypad .equals{background-color: hsl(25, 99%, 27%);}
+.whiteCalc .keypad .equals div{
+    background-color: hsl(25, 98%, 40%);
+    color: white
+}
+
+/* Purple theme */
+.purpleCalc {
+    color: hsl(52, 100%, 62%);
+    background-color: hsl(268, 75%, 9%);
+}
+.purpleCalc .screen{background-color: hsl(268, 71%, 12%);}
+.purpleCalc .keypad{background-color: hsl(268, 71%, 12%);}
+.purpleCalc .slider{background-color: hsl(268, 71%, 12%);}
+.purpleCalc .slider::after{
+    background-color: hsl(176, 100%, 44%);
+    transform: translateX(40px);
+}
+.purpleCalc .keypad .operational{background-color: hsl(290, 70%, 36%);}
+.purpleCalc .keypad .operational div{
+    background-color: hsl(268, 47%, 21%);
+    color: hsl(52, 100%, 62%);
+}
+.purpleCalc .keypad .erasional{background-color: hsl(285, 91%, 52%);}
+.purpleCalc .keypad .erasional div{
+    background-color: hsl(281, 89%, 26%);
+    color: white;
+}
+.purpleCalc .keypad .equals{background-color: hsl(177, 92%, 70%);}
+.purpleCalc .keypad .equals div{
+    background-color: hsl(176, 100%, 44%);
+    color: hsl(198, 20%, 13%)
+}
+
