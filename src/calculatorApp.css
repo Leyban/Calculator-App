@@ -210,7 +210,7 @@
 
 /* Some button pressing pizzazz */
 .CalculatorApp .keypad button:active div{
-    transform: translateY(1px);
+    transform: translateY(0px);
 }
 
 /* Getting rid of the ugly focus box */
@@ -224,6 +224,6 @@ button {
 textarea,
 button,
 select,
-a {
+a, .switch .slider {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
